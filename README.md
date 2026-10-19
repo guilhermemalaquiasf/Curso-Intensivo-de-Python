@@ -24,9 +24,9 @@ Exercícios do livro Curso Intensivo de Python, do Eric Matthes.
 - lista.pop(): Remove o último elemento e retorna o seu valor. Também é possível remover qualquer posição com lista.pop(posição)
 - lista.remove(valor): Remove da lista o elemento com o valor especificado.
 
-- lista.sort(): Ordena a lista por ordem alfabética. 
+* lista.sort(): Ordena a lista por ordem alfabética. 
 -- lista.sort(reverse=True) ordena ao contrário.
-- lista.sorted(): Retorna uma lista ordenada alfabeticamente, sem alterar a original.
+* lista.sorted(): Retorna uma lista ordenada alfabeticamente, sem alterar a original.
 -- lista.sorted(reverse=True) ordena ao contrário.
-- lista.reverse(): Inverte a ordem da lista.
-- len(lista): Retorna tamanho da lista.
+* lista.reverse(): Inverte a ordem da lista.
+* len(lista): Retorna tamanho da lista.
