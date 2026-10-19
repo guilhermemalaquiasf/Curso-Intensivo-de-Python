@@ -28,6 +28,7 @@ print('Lamento por ter que não poder te convidar para o jantar, ', convidados.p
 print('Lamento por ter que não poder te convidar para o jantar, ', convidados.pop().title())
 print('Lamento por ter que não poder te convidar para o jantar, ', convidados.pop().title())
 
+print('Vou convidar ', len(convidados), ' convidados')
 print('\n\n', convidados[0].title(), ' e ', convidados[1].title(), ', vocês estão convidados')
 del convidados[1]
 del convidados[0]

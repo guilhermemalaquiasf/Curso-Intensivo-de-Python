@@ -5,13 +5,13 @@ Exercícios do livro Curso Intensivo de Python, do Eric Matthes.
 ## CAPÍTULO 2
 
 ### STRINGS
-- texto.title(): Somente primeiras letras maiúsculas, resto minúsculas
+- texto.title(): Somente primeiras letras maiúsculas, resto minúsculas.
 - texto.upper(): Tudo maiúsculo.
 - texto.lower(): Tudo minúsculo.
-- f"{texto1} {texto2}": f-strings, junta strings
-- texto.rstrip(): Retorna string sem espaço a direita
+- f"{texto1} {texto2}": f-strings, junta strings.
+- texto.rstrip(): Retorna string sem espaço a direita.
 - texto.lstrip(): Retorna string sem espaço à esquerda.
-- texto.lstrip(): Retorna string sem espaço de ambos os lados.
+- texto.strip(): Retorna string sem espaço de ambos os lados.
 - texto.removeprefix('prefixo'): Retorna string sem um prefixo (no início)
 - texto.removesuffix('sufixo'): Retorna string sem um sufixo (no fim)
 
@@ -24,9 +24,18 @@ Exercícios do livro Curso Intensivo de Python, do Eric Matthes.
 - lista.pop(): Remove o último elemento e retorna o seu valor. Também é possível remover qualquer posição com lista.pop(posição)
 - lista.remove(valor): Remove da lista o elemento com o valor especificado.
 
-- lista.sort(): Ordena a lista por ordem alfabética. 
+- lista.sort(): Ordena a lista por ordem alfabética (tabela Unicode). 
     - lista.sort(reverse=True) ordena ao contrário.
-- lista.sorted(): Retorna uma lista ordenada alfabeticamente, sem alterar a original.
-    - lista.sorted(reverse=True) ordena ao contrário.
+- sorted(lista): Retorna uma lista ordenada alfabeticamente (tabela Unicode), sem alterar a original.
+    - sorted(lista, reverse=True) ordena ao contrário.
 - lista.reverse(): Inverte a ordem da lista.
 - len(lista): Retorna tamanho da lista.
+
+### Trabalhando com listas
+
+**for**
+```python
+gatos = ['Preto', 'Nina', 'Bolão']
+for gato in gatos:
+    print(gato)
+```

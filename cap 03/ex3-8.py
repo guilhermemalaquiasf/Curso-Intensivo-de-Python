@@ -1,0 +1,13 @@
+lugares = ['egito', 'roma', 'salvador', 'barcelona', 'finlândia']
+print(lugares)
+print(sorted(lugares))
+print(lugares)
+print(sorted(lugares, reverse=True))
+print(lugares)
+lugares.reverse()
+lugares.reverse()
+print(lugares)
+lugares.sort()
+print(lugares)
+lugares.sort()
+print(lugares)
