@@ -18,7 +18,15 @@ Exercícios do livro Curso Intensivo de Python, do Eric Matthes.
 ## CAPÍTULO 3
 
 ### LISTAS
-- lista.append('valor'): Adiciona um valor no fim da lista.
-- lista.insert(posição, 'valor'): Insere um novo elemento em qualquer posição.
+- lista.append(valor): Adiciona um valor no fim da lista.
+- lista.insert(posição, valor): Insere um novo elemento em qualquer posição.
 - del lista[posição]: remove o elemento da posição definida.
 - lista.pop(): Remove o último elemento e retorna o seu valor. Também é possível remover qualquer posição com lista.pop(posição)
+- lista.remove(valor): Remove da lista o elemento com o valor especificado.
+
+- lista.sort(): Ordena a lista por ordem alfabética. 
+-- lista.sort(reverse=True) ordena ao contrário.
+- lista.sorted(): Retorna uma lista ordenada alfabeticamente, sem alterar a original.
+-- lista.sorted(reverse=True) ordena ao contrário.
+- lista.reverse(): Inverte a ordem da lista.
+- len(lista): Retorna tamanho da lista.
