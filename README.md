@@ -1,6 +1,6 @@
 # ANOTAÇÕES PARA RECORDAR
 
-Anotações do livro Curso Intensivo de Python, do Eric Matthes.
+Anotações e resolução dos exercícios do livro Curso Intensivo de Python, do Eric Matthes.
 
 ## CAP 2 - VARIÁVEIS E TIPOS DE DADOS SIMPLES
 
@@ -59,11 +59,12 @@ for gato in gatos:
 **List comprehensions**
 
 - No exemplo a seguir de uma list comprehension, é criada uma lista dos quadrados dos primeiros números de 1 a 10.
-```
+```python
 quadrados = [numero**2 for numero in range(1,11)]
 ```
-O equivalente sem list comprehension, ficaria:
-```
+
+- O equivalente sem list comprehension, ficaria:
+```python
 quadrados = []
 for numero in range(1,11):
     quadrados.append(numero**2)
@@ -71,14 +72,31 @@ for numero in range(1,11):
 
 **Fatiando uma lista**
 
+- A sintaxe de slicing de listas no python é: lista[início:fim:passo]
 - Os índices são como no método range(), para ir até o último elemento da lista, é necessário ir um número além do índice. Por exemplo, o seguinte código imprime ['a', 'b', 'c'], ou seja, os elementos 0, 1 e 2.
-```
+```python
 lista = ['a', 'b', 'c', 'd', 'e']
 print(lista[0:3])
 ```
+
 - Com a omissão do primeiro índice, inicia-se no primeiro elemento. Com a omissão do último, finaliza-se no último.
 - Também funcionam os índices negativos. No seguinte exemplo, serão apresentados os últimos elementos da lista: ['c', 'd', 'e']].
-```
+```python
 lista = ['a', 'b', 'c', 'd', 'e']
 print(lista[-3:])
+```
+
+- Se você omitir o início e o fim, deixando apenas os dois pontos, ele percorre a lista inteira:
+```python
+numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# Pega do começo ao fim, pulando de 2 em 2
+print(numeros[::2])
+# Saída: [0, 2, 4, 6, 8]
+```
+
+- Se você colocar um número negativo no passo, o Python percorre a lista de trás para frente:
+```python
+numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(numeros[::-1])
+# Saída: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 ```
