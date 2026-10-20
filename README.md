@@ -49,7 +49,7 @@ for gato in gatos:
 
 **Métodos**
 
-- range(a,b): Gera uma série de números, de a até b-1.
+- range(a,b): Gera uma série de números, de a até b - 1.
     - range(a, b, c): Gera uma série de números de a até b - 1, de c em c.
 - list(a) : Converte a para uma lista.
 - min(digitos): Retorna o menor número de uma lista.
@@ -71,9 +71,14 @@ for numero in range(1,11):
 
 **Fatiando uma lista**
 
-- O seguinte código imprime ['a', 'b', 'c'], ou seja, os elementos 0, 1 e 2.
+- Os índices são como no método range(), para ir até o último elemento da lista, é necessário ir um número além do índice. Por exemplo, o seguinte código imprime ['a', 'b', 'c'], ou seja, os elementos 0, 1 e 2.
 ```
 lista = ['a', 'b', 'c', 'd', 'e']
 print(lista[0:3])
 ```
 - Com a omissão do primeiro índice, inicia-se no primeiro elemento. Com a omissão do último, finaliza-se no último.
+- Também funcionam os índices negativos. No seguinte exemplo, serão apresentados os últimos elementos da lista: ['c', 'd', 'e']].
+```
+lista = ['a', 'b', 'c', 'd', 'e']
+print(lista[-3:])
+```
