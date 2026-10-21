@@ -10,8 +10,9 @@ print("Segundo Rosa Luxemburgo: 'Quem não se movimenta não sente as correntes 
 
 print("Ex. 2.6")
 famous_person = "rosa luxemburgo"
-message = f"Segungo {famous_person.title()}: 'Quem não se movimenta não sente \
-    as correntes que o prendem.'"
+famous_person2 = "karl marx"
+message = f"Segungo {famous_person.title()} e {famous_person2}: \
+\"Quem não se movimenta não sente as correntes que o prendem.\""
 print(message)
 
 print("Ex. 2.7")

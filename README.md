@@ -9,7 +9,7 @@ Anotações e resolução dos exercícios do livro Curso Intensivo de Python, do
 - texto.title(): Somente primeiras letras maiúsculas, resto minúsculas.
 - texto.upper(): Tudo maiúsculo.
 - texto.lower(): Tudo minúsculo.
-- f"{texto1} {texto2}": f-strings, junta strings.
+- f"{texto1} {texto2}": f-strings, junta strings e strings de variáveis.
 - texto.rstrip(): Retorna string sem espaço a direita.
 - texto.lstrip(): Retorna string sem espaço à esquerda.
 - texto.strip(): Retorna string sem espaço de ambos os lados.
@@ -25,7 +25,8 @@ Anotações e resolução dos exercícios do livro Curso Intensivo de Python, do
 - lista.append(valor): Adiciona um valor no fim da lista.
 - lista.insert(posição, valor): Insere um novo elemento em qualquer posição.
 - del lista[posição]: remove o elemento da posição definida.
-- lista.pop(): Remove o último elemento e retorna o seu valor. Também é possível remover qualquer posição com lista.pop(posição).
+- lista.pop(): Remove o último elemento e retorna o seu valor. 
+    - Também é possível remover qualquer posição com lista.pop(posição).
 - lista.remove(valor): Remove da lista o elemento com o valor especificado.
 
 **Ordenação**
@@ -70,10 +71,10 @@ for numero in range(1,11):
     quadrados.append(numero**2)
 ```
 
-**Fatiando uma lista**
+**Fatiando uma lista - slicing**
 
 - A sintaxe de slicing de listas no python é: lista[início:fim:passo]
-- Os índices são como no método range(), para ir até o último elemento da lista, é necessário ir um número além do índice. Por exemplo, o seguinte código imprime ['a', 'b', 'c'], ou seja, os elementos 0, 1 e 2.
+- Os índices são como no método range(), para ir até o último elemento da lista, é necessário ir um número além do índice. Por exemplo, o seguinte código imprime ['a', 'b', 'c'], ou seja, os elementos 0, 1 e 2:
 ```python
 lista = ['a', 'b', 'c', 'd', 'e']
 print(lista[0:3])
@@ -99,4 +100,42 @@ print(numeros[::2])
 numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 print(numeros[::-1])
 # Saída: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+```
+
+**Percorrendo uma fatia com for**
+
+- Também é possível percorrer uma lista com os conceitos de fatiamento de listas. No exemplo a seguir, ao invés de percorrer toda a lista, percorremos somente os três primeiros jogadores:
+```python
+jogadores = ['charles', 'martina', 'michael', 'florence', 'eli']
+    for jogador in jogadores[:3]:
+        print(jogador)
+```
+
+**Copiando listas**
+
+- Ao se copiar uma lista para a outra, se eu fizer lista2 = lista1, ambas as variáveis apontam para a mesma lista. Como resultado, quando adicionamos um elemento na lista2, ele é adicionado na lista1, e vice-versa.
+- Para se copiar de forma independente os elementos de uma lista à outra, o correto é fazer:
+```python
+lista2 = lista'[:]
+```
+
+**Tuplas**
+
+- Tuplas são listas imutáveis.
+- tupla = ('a', 'b', 'c')
+
+## CAP 5 - IF
+
+- Exemplo de uso de if - elif - else:
+```python
+age = 12
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 25
+elif age < 65:
+    price = 40
+elif age >= 65:
+    price = 20
+print(f"Your admission cost is ${price}.")
 ```
