@@ -1,4 +1,4 @@
-# ANOTAÇÕES PARA RECORDAR
+# ANOTAÇÕES - CURSO INTENSIVO DE PYTHON
 
 Anotações e resolução dos exercícios do livro Curso Intensivo de Python, do Eric Matthes.
 
@@ -126,6 +126,8 @@ lista2 = lista'[:]
 
 ## CAP 5 - IF
 
+- Para verificar se um valor está em uma lista, basta fazer if valor in lista:
+
 - Exemplo de uso de if - elif - else:
 ```python
 age = 12
@@ -138,4 +140,72 @@ elif age < 65:
 elif age >= 65:
     price = 20
 print(f"Your admission cost is ${price}.")
+```
+
+**Verificando se uma lista não está vazia**
+- Quando o nome de uma lista é utilizado em uma instrução if, o Python retorna True se a lista contiver pelo menos um elemento; uma lista vazia é avaliada como False. Exemplo:
+```python
+requested_toppings = []
+if requested_toppings: #Não entra, pois a variável retorna False
+    for requested_topping in requested_toppings:
+        print(f"Adding {requested_topping}.")
+else: #Entra, pois a variável retorna False
+    print("Are you sure you want a plain pizza?")
+```
+
+## CAP 6 - DICIONÁRIOS
+
+
+- Para adicionar um novo par chave-valor, basta colocar o nome do dicionário seguido pela nova chave entre colchetes, com o valor novo:
+ ```python
+alien_0 = {'color': 'green', 'points': 5}
+alien_0['x_position'] = 0
+alien_0['y_position'] = 25
+```
+
+- Para modificar um valor em um dicionário, basta colocar o nome do dicionário com a chave entre colchetes e, em seguida, o valor novo
+que deseja associar a essa chave:
+ ```python
+alien_0 = {'color': 'green'}
+alien_0['color'] = 'yellow'
+```
+
+- Para remover um valor no dicionário, basta utilizar o del:
+ ```python
+alien_0 = {'color': 'green', 'points': 5}
+del alien_0['points']
+```
+
+- É possível utilizar o get() para acessar valores de dicionários, para definirmos uma saída padrão se a chave solicitada não existir:
+ ```python
+alien_0 = {'color': 'green', 'speed': 'slow'}
+point_value = alien_0.get('points', 'No point value assigned.')
+```
+
+**Percorrendo os pares chave-valor de um dicionário com um laço**
+
+- Para percorrer todos os pares chave-valor de um dicionário com um laço usamos 2 variáveis, uma para a chave e outra para o valor, e o método items(), que retorna uma sequência de pares chave-valor: 
+ ```python
+for key, value in user.items():
+ ```
+
+**Percorrendo as chaves de um dicionário com um laço**
+
+- Para percorrer todas as chaves de um dicionário com um laço, usamos o método keys(), que retorna as chaves, ou omitindo o método keys (ele é utilizado por padrão):
+ ```python
+for name in favorite_languages.keys():
+#ou então:
+for name in favorite_languages:
+```
+
+**Percorrendo os valores de um dicionário com um laço**
+
+- Para percorrer todos os valores de um dicionário com um laço, usamos o método values(), que retorna os valores. 
+ ```python
+for language in favorite_languages.values():
+```
+
+- Para retornar uma coleção de valores únicos, tirando os duplicados, podemos utilizar o método set():
+ ```python
+for language in set(favorite_languages.values()):
 ```
